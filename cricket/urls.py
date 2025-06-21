@@ -20,5 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('bowlers.urls')),
+    # Include the URLs from the bowlers app
+    # path('api/bowlers/', include('bowlers.urls')),  # Uncomment if you want to keep the old URL structure
 ]
 # This code sets up the URL routing for the cricket project, including the admin interface and the API endpoints for the bowlers app.

@@ -20,6 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+
 SECRET_KEY = 'django-insecure-l_9^-7$m)7j62_1(u8cb3^=*62!1+(6snq#1qc*-4jg#_z@h4#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -29,12 +30,15 @@ ALLOWED_HOSTS = []  # Replace with your server's IP address or domain name]
 
 
 # Application definition
+""" This section defines the installed applications and middleware for the Django project.
+It includes the Django admin, authentication, session management, and the custom app for bowlers.
+It also configures the Django REST framework for API support.
+"""
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ]
 }
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -45,7 +49,9 @@ INSTALLED_APPS = [
     'bowlers.apps.BowlersConfig',  # Custom app for bowlers
     'rest_framework',  # Django REST framework for API support
 ]
-
+"""This section sets up the middleware for the Django project.
+It includes security middleware, session management, CSRF protection, authentication, and message handling.
+"""
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

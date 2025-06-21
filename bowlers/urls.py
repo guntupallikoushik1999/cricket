@@ -1,6 +1,10 @@
+""" URL configuration for the bowlers app.
+This module sets up the URL routing for the BowlerViewSet, allowing for CRUD operations on bowler instances.
+# It uses Django's DefaultRouter to automatically generate the necessary routes for the BowlerViewSet.
+"""
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import BowlerViewSet, BowlerCrud
+from .views import BowlerViewSet
 # This code sets up the URL routing for the BowlerViewSet, allowing for CRUD operations on bowler instances.
 
 

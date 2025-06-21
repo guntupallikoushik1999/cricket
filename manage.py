@@ -1,5 +1,9 @@
 #!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
+"""Django's command-line utility for administrative tasks.
+This script is used to set up the Django environment and execute management commands.
+It allows you to run various administrative tasks such as starting the development server, creating migrations, and more.
+python manage.py runserver
+ctrl + c to stop the server on windows"""
 import os
 import sys
 

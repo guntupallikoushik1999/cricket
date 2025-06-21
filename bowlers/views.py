@@ -16,5 +16,7 @@ class BowlerViewSet(viewsets.ModelViewSet):
         name = self.request.query_params.get('name')
         if name:
             queryset = queryset.filter(name__icontains=name)
+        if age := self.request.query_params.get('age'):
+            queryset = queryset.filter(age=age)
         return queryset
     
